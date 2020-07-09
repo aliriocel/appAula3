@@ -1,0 +1,14 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th></th>
+        </tr>
+        <TR *ngFor="let aluno of lista">
+            <td>{{aluno.id}}</td>
+            <td>{{aluno.nome}}</td>
+            <td><a [routerLink]="['/alunos/',aluno.id]" class="btn btn-primary">Vizualizar</a></td>
+        </TR>
+    </table>
+</div>

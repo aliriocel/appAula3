@@ -1,0 +1,36 @@
+{
+  "alunos": [
+    {
+      "id": "101",
+      "matricula" : "12345",
+      "nome": "Aline Barbosa",
+      "telefone": "(21) 99999-9999",
+      "email": "aline@email.com",
+      "dataNascimento" : "20/03/2001"
+    },
+    {
+      "id": "102",
+      "matricula" : "26251",
+      "nome": "Roberto Mendonça",
+      "telefone": "(21) 99999-9999",
+      "email": "roberto@email.com",
+      "dataNascimento" : "10/04/2000"
+    },
+    {
+      "id": "107",
+      "matricula" : "39281",
+      "nome": "Bruno Silva",
+      "telefone": "(21) 99999-9999",
+      "email": "bruno@email.com",
+      "dataNascimento" : "12/10/2001"
+    },
+    {
+      "id": "108",
+      "matricula" : "23632",
+      "nome": "Carolina de Souza",
+      "telefone": "(21) 99999-9999",
+      "email": "carolina@email.com",
+      "dataNascimento" : "03/06/2002"
+    }
+  ]
+}
