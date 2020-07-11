@@ -21,4 +21,30 @@ export class AlunoService{
         return this.http.get<Aluno>(`${environment.API}/alunos/${id}`);
     }
 
+    update(obj : Aluno){
+
+        return this.http.put<Aluno>(`${environment.API}/alunos/${obj.id}`,
+            obj,
+            {
+                observe : 'response',
+                responseType : 'json'
+            });
+    }
+
+    new(obj : Aluno){
+
+        return this.http.post<Aluno>(`${environment.API}/alunos`,
+            obj,
+            {
+                observe : 'response',
+                responseType : 'json'
+            });
+    }
+
+    delete(obj : Aluno){
+        return this.http.delete(`${environment.API}/alunos/${obj.id}`);
+    }
+
+    
+
 }

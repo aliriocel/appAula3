@@ -21,6 +21,7 @@ export class AlunoDetalhesComponent implements OnInit {
 
         this.alunoServ.buscaById(id).subscribe(data=>{
           this.dados = data;
+          
         })
 
       })
@@ -29,4 +30,15 @@ export class AlunoDetalhesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+excluir(){
+
+  let op = confirm('Deseja Excluir?');
+
+  if(op===true){
+  this.alunoServ.delete(this.dados).subscribe(data=>{
+    console.log(data);
+    this.dados = new Aluno();
+  })
+}
+}
 }

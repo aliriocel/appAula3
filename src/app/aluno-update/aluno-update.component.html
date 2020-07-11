@@ -1,0 +1,67 @@
+<div class="container">
+
+    <h1>Atualização do Aluno</h1>
+
+    <div class="alert alert-warning" *ngIf="msg != null">{{msg}}</div>
+    <form class="form-horizontal" [formGroup]="formGroup" (ngSubmit)="atualizar()">
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="nome">Nome</label>
+            <div class="col-md-4">
+                <input class="form-control input-md" name="nome" id="nome" required 
+                formControlName="nome" [(ngModel)]="aluno.nome">
+            </div>
+            <span class="help-block" *ngIf="formGroup.controls.nome.errors 
+            && formGroup.controls.nome.dirty">Nome invládido</span>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="matricula">Matrícula</label>
+            <div class="col-md-4">
+                <input class="form-control input-md" name="matricula" id="matricula" required 
+                formControlName="matricula" [(ngModel)]="aluno.matricula">
+            </div>
+            <span class="help-block" *ngIf="formGroup.controls.matricula.errors 
+            && formGroup.controls.matricula.dirty">Matrícula invládida</span>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="telefone">Telefone</label>
+            <div class="col-md-4">
+                <input class="form-control input-md" name="telefone" id="telefone" required 
+                formControlName="telefone" [(ngModel)]="aluno.telefone">
+            </div>
+            <span class="help-block" *ngIf="formGroup.controls.telefone.errors 
+            && formGroup.controls.telefone.dirty">Telefone invládido</span>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="email">E-mail</label>
+            <div class="col-md-4">
+                <input class="form-control input-md" name="email" id="email" required 
+                formControlName="email" [(ngModel)]="aluno.email">
+            </div>
+            <span class="help-block" *ngIf="formGroup.controls.email.errors
+             && formGroup.controls.email.dirty">E-mail invládido</span>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="dataNascimento">Data de Nascimento</label>
+            <div class="col-md-4">
+                <input class="form-control input-md" name="dataNascimento" id="dataNascimento" required 
+                formControlName="dataNascimento" [(ngModel)]="aluno.email">
+            </div>
+            <span class="help-block" *ngIf="formGroup.controls.dataNascimento.errors 
+            && formGroup.controls.dataNascimento.dirty">Data invládida</span>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Cadastrar"></label>
+            <div class="col-md-4">
+                <button id="Cadastrar" name="Cadastrar" class="btn btn-primary" >Atualizar</button>
+            </div>
+
+        </div>
+
+    </form>
+</div>

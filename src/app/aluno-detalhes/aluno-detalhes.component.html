@@ -27,7 +27,7 @@
     </tr>
 </table>
 <div class="row">
-<div class="col-md-2"><a href="" class="btn btn-warning">Atualizar</a></div>
-<div class="col-md-2"><a href="" class="btn btn-danger">Excluir</a></div>
+<div class="col-md-2"><a [routerLink]="['/aluno-update',dados.id]" class="btn btn-warning">Atualizar</a></div>
+<div class="col-md-2"><button (click)="excluir()" class="btn btn-danger">Excluir</button></div>
 </div>
 </div>

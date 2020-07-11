@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AlunoService } from '../services/aluno.services';
+import { AlunoUpdateComponent } from './aluno-update/aluno-update.component';
+import { AlunoNewComponent } from './aluno-new/aluno-new.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AlunoService } from '../services/aluno.services';
     
     
     AlunosComponent,
-    AlunoDetalhesComponent
+    AlunoDetalhesComponent,
+    AlunoUpdateComponent,
+    AlunoNewComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { AlunoService } from '../services/aluno.services';
     RouterModule.forRoot([  
           {path: '', component: AlunosComponent},
           {path: 'alunos', component: AlunosComponent},
-          {path: 'alunos/:id', component: AlunoDetalhesComponent}
+          {path: 'alunos/:id', component: AlunoDetalhesComponent},
+          {path: 'aluno-update/:id', component: AlunoUpdateComponent},
+          {path: 'aluno-new', component: AlunoNewComponent}
     ])
   ],
   providers: [
