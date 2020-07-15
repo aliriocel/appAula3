@@ -11,16 +11,23 @@ import { RouterModule } from '@angular/router';
 import { AlunoService } from '../services/aluno.services';
 import { AlunoUpdateComponent } from './aluno-update/aluno-update.component';
 import { AlunoNewComponent } from './aluno-new/aluno-new.component';
+import { Interceptor } from 'src/services/interceptors/interceptors.module';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from 'src/services/auth.service';
+import {AuthGuardService} from 'src/services/auth-guard.service';
+import { LogoffComponent } from './logoff/logoff.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    
-    
+    AppComponent,    
     AlunosComponent,
     AlunoDetalhesComponent,
     AlunoUpdateComponent,
-    AlunoNewComponent
+    AlunoNewComponent,
+    LoginComponent,
+    LogoffComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -28,16 +35,15 @@ import { AlunoNewComponent } from './aluno-new/aluno-new.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    Interceptor,
     RouterModule.forRoot([  
-          {path: '', component: AlunosComponent},
-          {path: 'alunos', component: AlunosComponent},
-          {path: 'alunos/:id', component: AlunoDetalhesComponent},
-          {path: 'aluno-update/:id', component: AlunoUpdateComponent},
-          {path: 'aluno-new', component: AlunoNewComponent}
+          
     ])
   ],
   providers: [
-    AlunoService
+    AlunoService,
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
